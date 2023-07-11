@@ -6,9 +6,13 @@ We perform experiments on [DocRED](https://github.com/thunlp/DocRED) and [RE-Doc
 For the DocRED dataset, our denoised data can be found at this [link](https://drive.google.com/file/d/1Rk1bNJgZqQkQwtvNGuWzqzqSs_Z_B5TD/view?usp=sharing). 
 For the RE-DocRED dataset, our denoised data can be found at this [link](https://drive.google.com/file/d/1yyQyQlAWxKL1FZmoaWWWGjB7_sNOPLvD/view?usp=sharing).
 ## Training and Evaluation
-### Pretrain or fine-tune the DRE model:
+### Pretrain the DRE model with DS data:
 ```
-  bash scripts/run_train.sh
+  bash scripts/run_pretrain.sh
+```
+### Fine-tune the DRE model with human-annotated data:
+```
+  bash scripts/run_finetune.sh
 ```
 ### Generate pseudo instances with uncertainty scores
 ```
@@ -17,10 +21,6 @@ For the RE-DocRED dataset, our denoised data can be found at this [link](https:/
 ### Perform a re-label strategy to obtain denoised DS data
 ```
   python dataset.py
-```
-### Predict the DRE model:
-```
-  bash scripts/run_predict.sh
 ```
 Part of the code is adapted from [ATLOP.](https://github.com/wzhouad/ATLOP)
 ## Citation
