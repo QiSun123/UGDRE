@@ -1,5 +1,5 @@
 # UGDRE
-Code for ACL 2023 paper [Uncertainty Guided Label Denoising for Document-level Distant Relation Extraction.](https://arxiv.org/abs/2305.11029)
+Code for ACL 2023 paper [Uncertainty Guided Label Denoising for Document-level Distant Relation Extraction.](https://aclanthology.org/2023.acl-long.889/)
 ## Dataset
 We perform experiments on [DocRED](https://github.com/thunlp/DocRED) and [RE-DocRED](https://github.com/tonytan48/re-docred).
 ## Our Denoised data
