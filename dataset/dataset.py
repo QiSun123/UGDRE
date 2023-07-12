@@ -22,7 +22,7 @@ def Avg_type_Uncertainty(predictMap):
 
     for item in predictMap:
         for it in predictMap[item]:
-            type_UList[idmap[it['r']]].append(it['confidence']) #confidence->uncertainty
+            type_UList[idmap[it['r']]].append(it['uncertainty']) 
 
     for i in range(0, len(type_UList)):
         if type_UList[i] == []:
@@ -57,7 +57,7 @@ def Calculate_psudo_uncertainty(xu, DS_label):
             for it in val:
                 val[it] = []
             for item in xu[title]:
-                val[str(item['h_idx']) + '|' + str(item['t_idx'])].append(item['confidence'])
+                val[str(item['h_idx']) + '|' + str(item['t_idx'])].append(item['uncertainty'])
             uncertain_map[title] = val
     return uncertain_map
 
