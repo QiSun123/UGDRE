@@ -37,7 +37,7 @@ def to_official(meta,preds, features,entrs):
                         't_idx': t_idx[i],
                         'r': id2rel[p],
                         'inter':inter,
-                        'confidence':entrs[i][j]
+                        'uncertainty':entrs[i][j]
                     }
                 )
             j +=1
