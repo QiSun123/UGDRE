@@ -22,7 +22,7 @@ def Avg_type_Uncertainty(predictMap):
 
     for item in predictMap:
         for it in predictMap[item]:
-            type_UList[idmap[it['r']]].append(it['confidence'])
+            type_UList[idmap[it['r']]].append(it['confidence']) #confidence->uncertainty
 
     for i in range(0, len(type_UList)):
         if type_UList[i] == []:
@@ -52,7 +52,7 @@ def Calculate_psudo(x, DS_label):
 def Calculate_psudo_uncertainty(xu, DS_label):
     uncertain_map = {}
     for title in xu:
-        if title in DS_label:  # 因为result是直接加载的train_big的，通过这一步，可以过滤出train_nwe_o中的pseudo label
+        if title in DS_label:  
             val = copy.deepcopy(DS_label[title])
             for it in val:
                 val[it] = []
@@ -143,7 +143,7 @@ def relabel(origin_path,predict_S_path, save_relabel_path):
                             static_same[title] += len(val[pair])
         new_label[title]=val
 
-    print("******************** statistic *********************")
+    #print("******************** statistic *********************")
     total_pos = 0
     total_same = 0
     total_relabel = 0
@@ -153,11 +153,11 @@ def relabel(origin_path,predict_S_path, save_relabel_path):
         total_same += static_same[title]
         total_relabel += static_relabel[title]
         total_filter += static_filter[title]
-    print("pseudo label nums: ", len(predict_S))
-    print("relabed total_positive_instance: " + str(total_pos))
-    print("ratio of same as dis and pesudo: " + str((total_same / total_pos) * 100))
-    print("ratio of relabel: " + str((total_relabel / total_pos) * 100))
-    print("ratio of filter by high u: " + str((total_filter / total_pos) * 100))
+    #print("pseudo label nums: ", len(predict_S))
+    #print("relabed total_positive_instance: " + str(total_pos))
+    #print("ratio of same as dis and pesudo: " + str((total_same / total_pos) * 100))
+    #print("ratio of relabel: " + str((total_relabel / total_pos) * 100))
+    #print("ratio of filter by high u: " + str((total_filter / total_pos) * 100))
 
     train_new=[]
     map2id={}
