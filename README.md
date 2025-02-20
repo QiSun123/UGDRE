@@ -1,5 +1,10 @@
 # UGDRE
 Code for ACL 2023 paper [Uncertainty Guided Label Denoising for Document-level Distant Relation Extraction.](https://aclanthology.org/2023.acl-long.889/)
+## Installation
+```
+  conda env create -f environment.yml
+  conda activate UGDRE
+```
 ## Dataset
 We perform experiments on [DocRED](https://github.com/thunlp/DocRED) and [RE-DocRED](https://github.com/tonytan48/re-docred).
 ## Our Denoised data
